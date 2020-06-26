@@ -62,7 +62,6 @@ class HeaderContainerState extends State {
     return new Container(
       height: 177.0,
       width: double.infinity,
-//      color: Color(0xFF16c2b5),
       decoration: new BoxDecoration(
           gradient: LinearGradient(
               begin: Alignment.bottomCenter,
@@ -90,13 +89,13 @@ class HeaderContainerState extends State {
           new Expanded(
               child: new Container(
 //                color: Colors.blue,
-                padding: const EdgeInsets.only(top: 22),
-                child: new Column(
-                  children: <Widget>[
-                    new Expanded(
-                      child: new Align(
-                        alignment: Alignment.centerLeft,
-                        child: new Container(
+            padding: const EdgeInsets.only(top: 22),
+            child: new Column(
+              children: <Widget>[
+                new Expanded(
+                  child: new Align(
+                    alignment: Alignment.centerLeft,
+                    child: new Container(
                       width: 94.0,
                       child: RaisedButton(
                         onPressed: () {},
@@ -111,15 +110,14 @@ class HeaderContainerState extends State {
                     ),
                   ),
                 ),
-                    new Expanded(
-                      child: new Align(
-                        alignment: Alignment.centerLeft,
-                        child: new Text(
-                        '你的账号还没有登录',
-                        style: new TextStyle(color: const Color(0xFFFFFFFF)),
-                      ),
-                    )
-                )
+                new Expanded(
+                    child: new Align(
+                  alignment: Alignment.centerLeft,
+                  child: new Text(
+                    '你的账号还没有登录',
+                    style: new TextStyle(color: const Color(0xFFFFFFFF)),
+                  ),
+                ))
               ],
             ),
           )),
@@ -127,7 +125,6 @@ class HeaderContainerState extends State {
       ),
     );
   }
-
 }
 
 class MidBar extends StatelessWidget {
@@ -138,58 +135,33 @@ class MidBar extends StatelessWidget {
       margin: EdgeInsets.only(bottom: 11.0),
       width: double.infinity,
       height: 132.0,
-      color: Colors.white,
+      color: Colors.black,
       child: new Row(
         children: <Widget>[
           new Expanded(
             child: new Container(
-              color: Colors.pink,
-              child: Column(
-                children: <Widget>[
-                  new IconButton(icon: new Icon(Icons.favorite), onPressed: () {}),
-                  new Text('我的预约')
-                ],
-              ),
+              color: Colors.blue,
+              child: new Row(children: <Widget>[
+                new Expanded(
+                  child: new Container(
+                    color: Colors.pink,
+                    width: double.infinity,
+
+                    child: Column(
+                      children: <Widget>[
+                        new IconButton(
+                            icon: new Icon(Icons.favorite), onPressed: () {}),
+                        new Text('我的预约')
+                      ],
+                    ),
+                  ),
+                )
+
+              ]),
             ),
-          ),
-          new Expanded(
-            child: new Container(
-              color: Colors.pink,
-              child: Column(
-                children: <Widget>[
-                  new IconButton(icon: new Icon(Icons.favorite), onPressed: () {}),
-                  new Text('我的预约')
-                ],
-              ),
-            ),
-          ),
-          new Expanded(
-            child: new Container(
-              color: Colors.pink,
-              child: Column(
-                children: <Widget>[
-                  new IconButton(icon: new Icon(Icons.favorite), onPressed: () {}),
-                  new Text('我的预约')
-                ],
-              ),
-            ),
-          ),
-          new Expanded(
-            child: new Container(
-              color: Colors.pink,
-              child: Column(
-                children: <Widget>[
-                  new IconButton(icon: new Icon(Icons.favorite), onPressed: () {}),
-                  new Text('我的预约')
-                ],
-              ),
-            ),
-          ),
+          )
         ],
       ),
     );
   }
 }
-
-
-
