@@ -41,7 +41,7 @@ class LoginContentState extends State<LoginContent> {
       child: new Column(
         children: <Widget>[
           new Expanded(child: new HeaderContainer()),
-          new Expanded(child: new Text('Two')),
+          new Expanded(child: new MidBar()),
           new Expanded(child: new Text('Three')),
           new Expanded(child: new Text('Four')),
         ],
@@ -85,6 +85,7 @@ class HeaderContainerState extends State {
           new IconButton(
             icon: new Icon(Icons.account_circle),
             iconSize: 71.0,
+            onPressed: () {},
           ),
           new Expanded(
               child: new Container(
@@ -126,52 +127,69 @@ class HeaderContainerState extends State {
       ),
     );
   }
+
 }
 
-class MyBar extends StatelessWidget {
-  MyBar({this.title});
-  final Widget title;
-
+class MidBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
     return new Container(
-        height: 70,
-        padding: const EdgeInsets.symmetric(horizontal: 8.0),
-        decoration: new BoxDecoration(color: Color(0xFFCCccFF)),
-        child: new Row(
-          children: <Widget>[
-            new IconButton(
-              icon: new Icon(Icons.star),
-              onPressed: null,
-              tooltip: 'menu',
-            ),
-            new Expanded(
-              child: Center(
-                child: Text('CENter'),
+      margin: EdgeInsets.only(bottom: 11.0),
+      width: double.infinity,
+      height: 132.0,
+      color: Colors.white,
+      child: new Row(
+        children: <Widget>[
+          new Expanded(
+            child: new Container(
+              color: Colors.pink,
+              child: Column(
+                children: <Widget>[
+                  new IconButton(icon: new Icon(Icons.favorite), onPressed: () {}),
+                  new Text('我的预约')
+                ],
               ),
             ),
-            new Expanded(
-              child: new Text('hoho'),
-            )
-          ],
-        ));
-  }
-}
-
-class TopBar extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    // TODO: implement build
-    return new Scaffold(
-      body: MyBar(
-        title: new Text('TOP'),
-      ),
-      floatingActionButton: FloatingActionButton(
-        tooltip: 'Add',
-        child: Icon(Icons.favorite),
-        onPressed: null,
+          ),
+          new Expanded(
+            child: new Container(
+              color: Colors.pink,
+              child: Column(
+                children: <Widget>[
+                  new IconButton(icon: new Icon(Icons.favorite), onPressed: () {}),
+                  new Text('我的预约')
+                ],
+              ),
+            ),
+          ),
+          new Expanded(
+            child: new Container(
+              color: Colors.pink,
+              child: Column(
+                children: <Widget>[
+                  new IconButton(icon: new Icon(Icons.favorite), onPressed: () {}),
+                  new Text('我的预约')
+                ],
+              ),
+            ),
+          ),
+          new Expanded(
+            child: new Container(
+              color: Colors.pink,
+              child: Column(
+                children: <Widget>[
+                  new IconButton(icon: new Icon(Icons.favorite), onPressed: () {}),
+                  new Text('我的预约')
+                ],
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }
 }
+
+
+
