@@ -138,54 +138,47 @@ class MidBar extends StatelessWidget {
       margin: EdgeInsets.only(bottom: 11.0),
       width: double.infinity,
       height: 132.0,
-      color: Colors.white,
+      color: Colors.grey,
       child: new Row(
-        children: <Widget>[
-          new Expanded(
-            child: new Container(
-              color: Colors.pink,
-              child: Column(
-                children: <Widget>[
-                  new IconButton(icon: new Icon(Icons.favorite), onPressed: () {}),
-                  new Text('我的预约')
-                ],
-              ),
-            ),
-          ),
-          new Expanded(
-            child: new Container(
-              color: Colors.pink,
-              child: Column(
-                children: <Widget>[
-                  new IconButton(icon: new Icon(Icons.favorite), onPressed: () {}),
-                  new Text('我的预约')
-                ],
-              ),
-            ),
-          ),
-          new Expanded(
-            child: new Container(
-              color: Colors.pink,
-              child: Column(
-                children: <Widget>[
-                  new IconButton(icon: new Icon(Icons.favorite), onPressed: () {}),
-                  new Text('我的预约')
-                ],
-              ),
-            ),
-          ),
-          new Expanded(
-            child: new Container(
-              color: Colors.pink,
-              child: Column(
-                children: <Widget>[
-                  new IconButton(icon: new Icon(Icons.favorite), onPressed: () {}),
-                  new Text('我的预约')
-                ],
-              ),
-            ),
-          ),
-        ],
+             children: <Widget>[
+               new Expanded(child: new Container(
+                 height: 80,
+                 child: new Column(
+                   children: <Widget>[
+                     new IconButton(icon: new Icon(Icons.favorite), onPressed: () {}),
+                     new Text('我的预约')
+                   ],
+                 ),
+               )),
+               new Expanded(child: new Container(
+                 height: 80,
+                 child: new Column(
+                   children: <Widget>[
+                     new IconButton(icon: new Icon(Icons.favorite), onPressed: () {}),
+                     new Text('我的预约')
+                   ],
+                 ),
+               )),
+               new Expanded(child: new Container(
+                 height: 80,
+                 child: new Column(
+                   children: <Widget>[
+                     new IconButton(icon: new Icon(Icons.favorite), onPressed: () {}),
+                     new Text('我的预约')
+                   ],
+                 ),
+               )),
+               new Expanded(child: new Container(
+                 height: 80,
+                 child: new Column(
+                   children: <Widget>[
+                     new IconButton(icon: new Icon(Icons.favorite), onPressed: () {}),
+                     new Text('我的预约')
+                   ],
+                 ),
+               )),
+
+             ],
       ),
     );
   }
