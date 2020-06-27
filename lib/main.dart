@@ -138,14 +138,18 @@ class MidBar extends StatelessWidget {
       margin: EdgeInsets.only(bottom: 11.0),
       width: double.infinity,
       height: 132.0,
-      color: Colors.grey,
+//      color: Colors.grey,
       child: new Row(
              children: <Widget>[
                new Expanded(child: new Container(
                  height: 80,
                  child: new Column(
                    children: <Widget>[
-                     new IconButton(icon: new Icon(Icons.favorite), onPressed: () {}),
+//                     new IconButton(icon: new Icon(Icons.favorite), onPressed: () {}),
+                     new Container(
+                       margin: EdgeInsets.only(bottom: 9.0),
+                       child: Image(image: AssetImage('assets/images/ucenter/myorder.png'), width: 49, height: 49,),
+                     ),
                      new Text('我的预约')
                    ],
                  ),
@@ -154,8 +158,11 @@ class MidBar extends StatelessWidget {
                  height: 80,
                  child: new Column(
                    children: <Widget>[
-                     new IconButton(icon: new Icon(Icons.favorite), onPressed: () {}),
-                     new Text('我的预约')
+                     new Container(
+                       margin: EdgeInsets.only(bottom: 9.0),
+                       child: Image(image: AssetImage('assets/images/ucenter/audit.png'), width: 49, height: 49,),
+                     ),
+                     new Text('预约审核')
                    ],
                  ),
                )),
@@ -163,8 +170,11 @@ class MidBar extends StatelessWidget {
                  height: 80,
                  child: new Column(
                    children: <Widget>[
-                     new IconButton(icon: new Icon(Icons.favorite), onPressed: () {}),
-                     new Text('我的预约')
+                     new Container(
+                       margin: EdgeInsets.only(bottom: 9.0),
+                       child: Image(image: AssetImage('assets/images/ucenter/fav.png'), width: 49, height: 49,),
+                     ),
+                     new Text('我的关注')
                    ],
                  ),
                )),
@@ -172,8 +182,11 @@ class MidBar extends StatelessWidget {
                  height: 80,
                  child: new Column(
                    children: <Widget>[
-                     new IconButton(icon: new Icon(Icons.favorite), onPressed: () {}),
-                     new Text('我的预约')
+                     new Container(
+                       margin: EdgeInsets.only(bottom: 9.0),
+                       child: Image(image: AssetImage('assets/images/ucenter/folder.png'), width: 49, height: 49,),
+                     ),
+                     new Text('收藏文章')
                    ],
                  ),
                )),
