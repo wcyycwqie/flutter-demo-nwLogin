@@ -4,6 +4,7 @@ import 'order.dart';
 import 'mall.dart';
 import 'community.dart';
 import 'afterSale.dart';
+import 'package:nwlogin/Ucenter/languages.dart';
 
 var colorBulue = Color(0xFF66ccff);
 
@@ -15,7 +16,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
-    return new MaterialApp(title: 'NewWare', home: NwView());
+    return new MaterialApp(
+        title: 'NewWare',
+        home: NwView(),
+    );
   }
 }
 

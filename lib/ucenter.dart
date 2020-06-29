@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nwlogin/Ucenter/languages.dart';
 
 class UcenterContent extends StatefulWidget {
   @override
@@ -202,6 +203,12 @@ class LoginList extends StatelessWidget {
             leading: Icon(Icons.language),
             title: Text('多语言'),
             trailing: Icon(Icons.keyboard_arrow_right),
+            onTap: () {
+              Navigator.push(
+                context,
+                  MaterialPageRoute(builder: (context) => LanguagesPages())
+              );
+            },
           ),
           new Divider(),
           ListTile(
