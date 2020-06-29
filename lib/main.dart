@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+var colorBulue = Color(0xFF66ccff);
+
 void main() {
   runApp(MyApp());
 }
@@ -13,6 +15,7 @@ class MyApp extends StatelessWidget {
 }
 
 class NwView extends StatelessWidget {
+
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
@@ -22,7 +25,7 @@ class NwView extends StatelessWidget {
 //        title: new Text('Login'),
 //        backgroundColor: Color(0xFF0da9e3),
 //      ),
-      body: LoginContent(),
+      body: new LoginContent(),
     );
   }
 }
@@ -37,13 +40,12 @@ class LoginContentState extends State<LoginContent> {
   Widget build(BuildContext context) {
     // TODO: implement build
     return new Container(
-      color: Color(0xFFffffff),
+      color: Color(0xFFEEEEEE),
       child: new Column(
         children: <Widget>[
           new Expanded(child: new HeaderContainer(), flex: 0,),
           new Expanded(child: new MidBar(), flex: 0,),
-          new Expanded(child: new Text('Three'), flex: 0,),
-          new Expanded(child: new Text('Four'), flex: 0,),
+          new Expanded(child: new LoginList(), flex: 0,),
         ],
       ),
     );
@@ -136,7 +138,7 @@ class MidBar extends StatelessWidget {
       margin: EdgeInsets.only(bottom: 11.0),
       width: double.infinity,
       height: 132.0,
-//      color: Colors.grey,
+      color: Colors.white,
       child: new Row(
         children: <Widget>[
           new Expanded(
@@ -213,3 +215,101 @@ class MidBar extends StatelessWidget {
     );
   }
 }
+
+class LoginList extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    return Container(
+      color: Colors.white,
+      constraints: BoxConstraints(
+        maxHeight: 320,
+      ),
+      child: new ListView(
+        padding: const EdgeInsets.only(left: 1.0, top: 0, right: 0.0, bottom: 0),
+        children: <Widget>[
+          ListTile(
+            leading: Icon(Icons.language),
+            title: Text('多语言'),
+            trailing: Icon(Icons.keyboard_arrow_right),
+          ),
+          new Divider(),
+          ListTile(
+            leading: Icon(Icons.verified_user),
+            title: Text('账号与安全'),
+            trailing: Icon(Icons.keyboard_arrow_right),
+          ),
+          new Divider(),
+          ListTile(
+            leading: Icon(Icons.mail),
+            title: Text('BTS注册码'),
+            trailing: Icon(Icons.keyboard_arrow_right),
+          ),
+          new Divider(),
+          ListTile(
+            leading: Icon(Icons.help),
+            title: Text('帮助中心'),
+            trailing: Icon(Icons.keyboard_arrow_right),
+          ),
+          new Divider(),
+          ListTile(
+            leading: Icon(Icons.headset),
+            title: Text('客户服务'),
+            trailing: Icon(Icons.keyboard_arrow_right),
+          ),
+          new Divider(),
+          ListTile(
+            leading: Icon(Icons.comment),
+            title: Text('意见反馈'),
+            trailing: Icon(Icons.keyboard_arrow_right),
+          ),
+          new Divider(),
+          ListTile(
+            leading: Icon(Icons.info),
+            title: Text('关于'),
+            trailing: Icon(Icons.keyboard_arrow_right),
+          ),
+          new Divider(),
+        ],
+      ),
+    );
+  }
+}
+
+
+class TestList extends StatefulWidget {
+  @override
+  createState() => new TestListState();
+}
+
+class TestListState extends State {
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    return ListView(
+      padding: const EdgeInsets.all(16.0),
+      children: <Widget>[
+        ListTile(
+          title: Text('多语言'),
+          leading: Icon(Icons.favorite),
+          trailing: Icon(Icons.keyboard_arrow_right),
+        ),
+        ListTile(
+          title: Text('多语言'),
+          leading: Icon(Icons.favorite),
+          trailing: Icon(Icons.keyboard_arrow_right),
+        ),
+        ListTile(
+          title: Text('多语言'),
+          leading: Icon(Icons.favorite),
+          trailing: Icon(Icons.keyboard_arrow_right),
+        ),
+      ],
+
+    );
+
+  }
+}
+
+
+
