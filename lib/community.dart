@@ -5,9 +5,12 @@ class Community extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
-    return Center(
-      child: Text(
-          '社区'
+    return new Container(
+      color: Colors.green[200],
+      child: Center(
+        child: Text(
+            '社区'
+        ),
       ),
     );
   }

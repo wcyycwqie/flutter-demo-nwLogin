@@ -5,9 +5,12 @@ class Order extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
-    return Center(
-      child: Text(
-        '智能'
+    return new Container(
+      color: Colors.red[200],
+      child: Center(
+        child: Text(
+            '智能'
+        ),
       ),
     );
   }

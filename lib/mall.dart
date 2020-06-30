@@ -5,9 +5,12 @@ class Mall extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
-    return Center(
-      child: Text(
-          '研选'
+    return new Container(
+      color: Colors.blue[200],
+      child: Center(
+        child: Text(
+            '研选'
+        ),
       ),
     );
   }
