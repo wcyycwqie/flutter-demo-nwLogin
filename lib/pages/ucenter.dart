@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:nwlogin/Ucenter/languages.dart';
+import 'package:nwlogin/pages/Ucenter/languages.dart';
 
 class UcenterContent extends StatefulWidget {
   @override

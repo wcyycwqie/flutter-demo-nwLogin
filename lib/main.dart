@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:nwlogin/ucenter.dart';
-import 'order.dart';
-import 'mall.dart';
-import 'community.dart';
-import 'afterSale.dart';
-import 'package:nwlogin/Ucenter/languages.dart';
+import 'package:nwlogin/pages/ucenter.dart';
+import 'pages/order.dart';
+import 'pages/mall.dart';
+import 'pages/community.dart';
+import 'pages/afterSale.dart';
+import 'package:nwlogin/pages/Ucenter/languages.dart';
 
 var colorBulue = Color(0xFF66ccff);
 
@@ -17,8 +17,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     // TODO: implement build
     return new MaterialApp(
-        title: 'NewWare',
-        home: NwView(),
+      title: 'NewWare',
+      home: NwView(),
     );
   }
 }
@@ -58,7 +58,6 @@ class NwViewState extends State {
       icon: Icon(Icons.tag_faces),
       title: Text('我的'),
     ),
-
   ];
 
   final pages = [Order(), Mall(), Community(), AfterSale(), UcenterContent()];
@@ -71,7 +70,7 @@ class NwViewState extends State {
     currentIndex = 0;
   }
 
-  void _changeIndex (int index) {
+  void _changeIndex(int index) {
     if (index != currentIndex) {
       setState(() {
         currentIndex = index;
@@ -97,11 +96,7 @@ class NwViewState extends State {
         onTap: (i) {
           _changeIndex(i);
         },
-
       ),
     );
   }
-
 }
-
-
