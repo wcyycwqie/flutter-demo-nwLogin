@@ -19,6 +19,9 @@ class MyApp extends StatelessWidget {
     return new MaterialApp(
       title: 'NewWare',
       home: NwView(),
+      routes: {
+        'gotLanguage': (BuildContext context) => LanguagesPages(),
+      },
     );
   }
 }

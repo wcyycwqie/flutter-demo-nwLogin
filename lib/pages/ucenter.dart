@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:nwlogin/pages/Ucenter/languages.dart';
+import 'package:nwlogin/pages/Ucenter/login.dart';
 
 class UcenterContent extends StatefulWidget {
   @override
@@ -14,9 +15,18 @@ class UcenterContentState extends State<UcenterContent> {
       color: Color(0xFFEEEEEE),
       child: new Column(
         children: <Widget>[
-          new Expanded(child: new HeaderContainer(), flex: 0,),
-          new Expanded(child: new MidBar(), flex: 0,),
-          new Expanded(child: new LoginList(), flex: 0,),
+          new Expanded(
+            child: new HeaderContainer(),
+            flex: 0,
+          ),
+          new Expanded(
+            child: new MidBar(),
+            flex: 0,
+          ),
+          new Expanded(
+            child: new LoginList(),
+            flex: 0,
+          ),
         ],
       ),
     );
@@ -63,38 +73,43 @@ class HeaderContainerState extends State {
           new Expanded(
               child: new Container(
 //                color: Colors.blue,
-                padding: const EdgeInsets.only(top: 22),
-                child: new Column(
-                  children: <Widget>[
-                    new Expanded(
-                      child: new Align(
-                        alignment: Alignment.centerLeft,
-                        child: new Container(
-                          width: 94.0,
-                          child: RaisedButton(
-                            onPressed: () {},
-                            textColor: Color(0xFF9e6f32),
-                            color: Color(0xFFead22d),
-                            splashColor: Color(0xFF66CCFF),
-                            shape: RoundedRectangleBorder(
-                                borderRadius:
+            padding: const EdgeInsets.only(top: 22),
+            child: new Column(
+              children: <Widget>[
+                new Expanded(
+                  child: new Align(
+                    alignment: Alignment.centerLeft,
+                    child: new Container(
+                      width: 94.0,
+                      child: RaisedButton(
+                        onPressed: () {
+                          Navigator.push(context, new MaterialPageRoute(
+                              builder: (BuildContext context) {
+                            return new LoginPage(title: "路由传参");
+                          }));
+                        },
+                        textColor: Color(0xFF9e6f32),
+                        color: Color(0xFFead22d),
+                        splashColor: Color(0xFF66CCFF),
+                        shape: RoundedRectangleBorder(
+                            borderRadius:
                                 BorderRadius.all(Radius.circular(10))),
-                            child: new Text('前往登录'),
-                          ),
-                        ),
+                        child: new Text('前往登录'),
                       ),
                     ),
-                    new Expanded(
-                        child: new Align(
-                          alignment: Alignment.centerLeft,
-                          child: new Text(
-                            '你的账号还没有登录',
-                            style: new TextStyle(color: const Color(0xFFFFFFFF)),
-                          ),
-                        ))
-                  ],
+                  ),
                 ),
-              )),
+                new Expanded(
+                    child: new Align(
+                  alignment: Alignment.centerLeft,
+                  child: new Text(
+                    '你的账号还没有登录',
+                    style: new TextStyle(color: const Color(0xFFFFFFFF)),
+                  ),
+                ))
+              ],
+            ),
+          )),
         ],
       ),
     );
@@ -114,73 +129,85 @@ class MidBar extends StatelessWidget {
         children: <Widget>[
           new Expanded(
               child: new Container(
-                height: 80,
-                child: new Column(
-                  children: <Widget>[
+            height: 80,
+            child: new Column(
+              children: <Widget>[
 //                     new IconButton(icon: new Icon(Icons.favorite), onPressed: () {}),
-                    new Container(
-                      margin: EdgeInsets.only(bottom: 9.0),
-                      child: Image(
-                        image: AssetImage('assets/images/ucenter/myorder.png'),
-                        width: 49,
-                        height: 49,
-                      ),
-                    ),
-                    new Text('我的预约', style: new TextStyle(color: const Color(0xFF333333)),)
-                  ],
+                new Container(
+                  margin: EdgeInsets.only(bottom: 9.0),
+                  child: Image(
+                    image: AssetImage('assets/images/ucenter/myorder.png'),
+                    width: 49,
+                    height: 49,
+                  ),
                 ),
-              )),
+                new Text(
+                  '我的预约',
+                  style: new TextStyle(color: const Color(0xFF333333)),
+                )
+              ],
+            ),
+          )),
           new Expanded(
               child: new Container(
-                height: 80,
-                child: new Column(
-                  children: <Widget>[
-                    new Container(
-                      margin: EdgeInsets.only(bottom: 9.0),
-                      child: Image(
-                        image: AssetImage('assets/images/ucenter/audit.png'),
-                        width: 49,
-                        height: 49,
-                      ),
-                    ),
-                    new Text('预约审核', style: new TextStyle(color: const Color(0xFF333333)),)
-                  ],
+            height: 80,
+            child: new Column(
+              children: <Widget>[
+                new Container(
+                  margin: EdgeInsets.only(bottom: 9.0),
+                  child: Image(
+                    image: AssetImage('assets/images/ucenter/audit.png'),
+                    width: 49,
+                    height: 49,
+                  ),
                 ),
-              )),
+                new Text(
+                  '预约审核',
+                  style: new TextStyle(color: const Color(0xFF333333)),
+                )
+              ],
+            ),
+          )),
           new Expanded(
               child: new Container(
-                height: 80,
-                child: new Column(
-                  children: <Widget>[
-                    new Container(
-                      margin: EdgeInsets.only(bottom: 9.0),
-                      child: Image(
-                        image: AssetImage('assets/images/ucenter/fav.png'),
-                        width: 49,
-                        height: 49,
-                      ),
-                    ),
-                    new Text('我的关注', style: new TextStyle(color: const Color(0xFF333333)),)
-                  ],
+            height: 80,
+            child: new Column(
+              children: <Widget>[
+                new Container(
+                  margin: EdgeInsets.only(bottom: 9.0),
+                  child: Image(
+                    image: AssetImage('assets/images/ucenter/fav.png'),
+                    width: 49,
+                    height: 49,
+                  ),
                 ),
-              )),
+                new Text(
+                  '我的关注',
+                  style: new TextStyle(color: const Color(0xFF333333)),
+                )
+              ],
+            ),
+          )),
           new Expanded(
               child: new Container(
-                height: 80,
-                child: new Column(
-                  children: <Widget>[
-                    new Container(
-                      margin: EdgeInsets.only(bottom: 9.0),
-                      child: Image(
-                        image: AssetImage('assets/images/ucenter/folder.png'),
-                        width: 49,
-                        height: 49,
-                      ),
-                    ),
-                    new Text('收藏文章', style: new TextStyle(color: const Color(0xFF333333)),)
-                  ],
+            height: 80,
+            child: new Column(
+              children: <Widget>[
+                new Container(
+                  margin: EdgeInsets.only(bottom: 9.0),
+                  child: Image(
+                    image: AssetImage('assets/images/ucenter/folder.png'),
+                    width: 49,
+                    height: 49,
+                  ),
                 ),
-              )),
+                new Text(
+                  '收藏文章',
+                  style: new TextStyle(color: const Color(0xFF333333)),
+                )
+              ],
+            ),
+          )),
         ],
       ),
     );
@@ -197,17 +224,21 @@ class LoginList extends StatelessWidget {
         maxHeight: 320,
       ),
       child: new ListView(
-        padding: const EdgeInsets.only(left: 1.0, top: 0, right: 0.0, bottom: 0),
+        padding:
+            const EdgeInsets.only(left: 1.0, top: 0, right: 0.0, bottom: 0),
         children: <Widget>[
           ListTile(
             leading: Icon(Icons.language),
             title: Text('多语言'),
             trailing: Icon(Icons.keyboard_arrow_right),
             onTap: () {
-              Navigator.push(
-                context,
-                  MaterialPageRoute(builder: (context) => LanguagesPages())
-              );
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => LanguagesPages()));
+              // Navigator.of(context).push(new MaterialPageRoute(builder: (_) {
+              //   return new LoginPage('路由传值');
+              // }));
+
+              //  Navigator.pushNamed(context, "gotLanguage");
             },
           ),
           new Divider(),
@@ -252,3 +283,5 @@ class LoginList extends StatelessWidget {
     );
   }
 }
+
+class NextPage {}

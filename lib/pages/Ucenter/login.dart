@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatefulWidget {
+  LoginPage({String title});
+
   @override
   State<StatefulWidget> createState() {
     // TODO: implement createState
@@ -9,8 +11,6 @@ class LoginPage extends StatefulWidget {
 }
 
 class LoginPageState extends State {
-
-
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
@@ -32,14 +32,15 @@ class LoginContentState extends State {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
-    return Container (
+    return Container(
       margin: EdgeInsets.only(top: 38.0),
       color: Colors.blue,
       child: Center(
         child: Column(
           children: <Widget>[
-            new Expanded(child: new Container(
-
+            new Expanded(
+                child: new Container(
+              child: Text('登录'),
             ))
           ],
         ),

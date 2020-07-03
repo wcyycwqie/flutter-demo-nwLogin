@@ -1,21 +1,21 @@
 import 'package:flutter/material.dart';
 
 class LanguagesPages extends StatelessWidget {
+  LanguagesPages({String title});
+
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
-    return new Scaffold (
+    return new Scaffold(
       appBar: AppBar(
         leading: new IconButton(
             icon: Icon(Icons.chevron_left),
-            onPressed: (){
+            onPressed: () {
               print('back');
               Navigator.of(context).pop();
-        }),
+            }),
         title: Text('多语言'),
-        actions: <Widget>[
-          Text('保存')
-        ],
+        actions: <Widget>[Text('保存')],
       ),
       body: new Container(
         height: 300,
